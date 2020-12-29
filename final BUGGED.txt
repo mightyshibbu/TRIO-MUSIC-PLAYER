@@ -1,0 +1,106 @@
+#***************************************************LINKED LIST****************************************
+import random
+
+class node:
+    def __init__(self,data=None):
+        self.data=data
+        self.next=None
+        
+class linked_list:
+    def __init__(self):
+        self.head = node()
+        
+    def append(self,data):
+        new_node = node(data)   #node used
+        cur = self.head   #constructor used
+        while cur.next!=None:
+            cur = cur.next
+        cur.next = new_node
+        
+    def length(self):
+        cur = self.head
+        total = 0
+        while cur.next!=None:
+            total+=1
+            cur = cur.next
+        return total
+    
+    def display(self):
+        elems = []
+        cur_node = self.head
+        while cur_node.next!=None:
+            cur_node=cur_node.next
+            elems.append(cur_node.data)
+        j=1
+        for i in elems: 
+            print("\n",j,".",i)
+            j=j+1
+    def checkempty(self):
+        cur_node = self.head
+        if cur_node==None:
+            return(False)
+        else:
+            return(True)
+    def quickplaylist(self):
+        elems = []
+        cur_node = self.head
+        while cur_node.next!=None:
+            cur_node=cur_node.next
+            elems.append(cur_node.data)
+        leng=length()
+        ran=random.randint(0,leng-1)
+        print("\n\tCurrently playing: ",elems[ram])
+            
+my_list = linked_list()                               
+    
+    #***************************************************TRIO-MUSIC-PLAYER****************************************
+#***************************************************HOME****************************************
+def quickplay():
+    #defination
+    if my_list.checkempty()==True:
+        print("Play list is Empty ! \n Add songs by pressing 5")
+    else:
+        print("\nHere you go !\n")
+        my_list.quickplaylist()
+        
+    home()
+def openlist():
+    #defination
+    print("**************PLAYLIST*************")
+    my_list.display()
+    print("\n*************************************")
+    home()
+def changesequence():
+    #defination
+    print("\nSEQ options...")
+    home()
+
+
+def home():
+    print("\nHOME: (Press respective number to perform action)")
+    print("\n1. Quick start","\n2. Open list","\n3. Sequence [Alternate/Loop/Shuffle]","\n4. Exit","\n5. Add songs")
+    
+    action=int(input("Select operation number:"))
+
+    if action==4:
+        print("\nExiting TMP player...")
+        exit()
+    elif action==1:
+        
+        quickplay()
+    elif action==2:
+        print("\nHere's the List:\n")
+        openlist()
+    elif action==3:
+        changesequence()
+    elif action==5:
+        songname=input("Enter songname: ")
+        my_list.append(songname)
+        print("Song added successfully!")
+    else:
+        print("\n*** Invalid input ***\n")
+    home()
+
+print("                    *-------TRIO-------*")
+print("                    *   MUSIC PLAYER   *")
+home()
