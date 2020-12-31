@@ -40,7 +40,7 @@ class linked_list:
 
     def checkempty(self):
         cur_node = self.head
-        if cur_node == None:
+        if cur_node.next == None:
             return (True)
         else:
             return (False)
