@@ -63,6 +63,7 @@ class linked_list:
         ran = random.randint(0, leng - 1)
 
         print("\n\tCurrently playing: ", elems[ran])
+        print("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _") #isme laga delay
 
     def alternate(self):
         elems = []
@@ -72,8 +73,8 @@ class linked_list:
             elems.append(cur_node.data)
         leng = my_list.length()
         for i in range(0, leng):
-            print("*******************************************************")
-            print("\nCurrently playing: ", "\n\t", i+1, ".", elems[i])
+            print("\nCurrently playing: ", i+1, ".", elems[i])
+            print("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")  # isme laga delay
             if i == leng - 1:
                 print("\n************PLAYLIST_PLAYED************")
 
@@ -86,7 +87,8 @@ class linked_list:
         for p in range(s):
             cur_node=cur_node.next
         for i in range(n):
-            print("\nPlaying ",cur_node.data,"\n _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
+            print("\nPlaying ",cur_node.data)
+            print("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")  # isme laga delay
 
     def shuffle(self):
         elems = []
@@ -98,8 +100,9 @@ class linked_list:
         again=0
         while True:
             ran = random.randint(0, leng - 1)
-            print("\n\tCurrently playing: ", elems[ran], "\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")
-            again=input("Press E to Stop:")
+            print("\n\tCurrently playing: ", elems[ran])
+            print("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")  # isme laga delay
+            again=input("\n\tPress E to Stop:")
             if again=="e" or again=="E":
                 break
 
