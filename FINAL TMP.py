@@ -1,5 +1,4 @@
-    # ***************************************************LINKED LIST****************************************
-import random
+    import random
 
 
 class node:
@@ -62,11 +61,12 @@ class linked_list:
 
         ran = random.randint(0, leng - 1)
 
-        print("\n\tCurrently playing: ", elems[ran])
-             from time import sleep
-                playlist = 'SONGNAME.............'
-                for i in range(20):
-                      print(playlist[i],  end='-'); sleep(0.5)#isme laga delay
+        print("\n\t\t\tCurrently playing:", elems[ran])
+        from time import sleep
+        playlist = '* * * * _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ * * * *'
+        for i in range(len(playlist)):
+            print(playlist[i],  end=''); sleep(0.1) #delayfunction
+        print("\n")
 
     def alternate(self):
         elems = []
@@ -77,12 +77,15 @@ class linked_list:
         leng = my_list.length()
         for i in range(0, leng):
             print("\nCurrently playing: ", i+1, ".", elems[i])
-              from time import sleep
-               playlist = 'SONGNAME.............'
-               for i in range(20):
-                 print(playlist[i],  end='-'); sleep(0.5)# isme laga delay
-            if i == leng - 1:
-                print("\n************PLAYLIST_PLAYED************")
+            from time import sleep
+            playlist = '* * * * _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ * * * *'
+            for i in range(len(playlist)):
+                print(playlist[i], end='');
+                sleep(0.1)  # delayfunction
+            print("\n")
+
+        if i == leng - 1:
+            print("\n************PLAYLIST_PLAYED************")
 
     def loop(self):
         print("'Select the number of a song from the playlist: '")
@@ -95,9 +98,11 @@ class linked_list:
         for i in range(n):
             print("\nPlaying ",cur_node.data)
             from time import sleep
-               playlist = 'SONGNAME.............'
-               for i in range(20):
-                      print(playlist[i],  end='-'); sleep(0.5) # isme laga delay
+            playlist = '* * * * _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ * * * *'
+            for i in range(len(playlist)):
+                print(playlist[i], end='');
+                sleep(0.1)  # delayfunction
+            print("\n")
 
     def shuffle(self):
         elems = []
@@ -110,18 +115,38 @@ class linked_list:
         while True:
             ran = random.randint(0, leng - 1)
             print("\n\tCurrently playing: ", elems[ran])
-              from time import sleep
-                   playlist = 'SONGNAME.............'
-                   for i in range(20):
-                       print(playlist[i],  end='-'); sleep(0.5)# isme laga delay
-            again=input("\n\tPress E to Stop:")
+            from time import sleep
+            playlist = '* * * * _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ * * * *'
+            for i in range(len(playlist)):
+                print(playlist[i], end='');
+                sleep(0.1)  # delayfunction
+            print("\n")
+            again=input("\n\tPress E to Stop OR anything to continue:")
             if again=="e" or again=="E":
                 break
 
 my_list = linked_list()
 
 
-# ***************************************************TRIO-MUSIC-PLAYER****************************************
+# *****************************************C:\Users\91788\PycharmProjects\pythonProject1\venv\Scripts\python.exe C:/Users/91788/PycharmProjects/pythonProject1/main.py
+#
+#
+#
+#
+#
+# ********************************************************************************************************************************************************************************
+#                                                                       *-------TRIO-------*
+#                                                                       *   MUSIC PLAYER   *
+# ********************************************************************************************************************************************************************************
+#
+# HOME: (Press respective number to perform action)
+#
+# 1. Quick start
+# 2. Open list
+# 3. Sequence [Alternate/Loop/Shuffle]
+# 4. Exit
+# 5. Add songs
+# Select operation number:**********TRIO-MUSIC-PLAYER****************************************
 # ***************************************************HOME****************************************
 def quickplay():
     # defination
@@ -161,13 +186,14 @@ def changesequence():
 
 
 def home():
-    print("*******************************************************")
+    print("********************************************************************************************************************************************************************************")
     print("\nHOME: (Press respective number to perform action)")
     print("\n1. Quick start", "\n2. Open list", "\n3. Sequence [Alternate/Loop/Shuffle]", "\n4. Exit", "\n5. Add songs")
 
     action = input("Select operation number:")
 
     if action == "4":
+        print("\n\n\t\t(: THANKS FOR LISTENING TEXTS :)")
         print("\nExiting TMP player...")
         exit()
     elif action == "1":
@@ -186,7 +212,8 @@ def home():
         print("\n*** Invalid input ***\n")
     home()
 
-
-print("                    *-------TRIO-------*")
-print("                    *   MUSIC PLAYER   *")
+print("\n\n\n\n")
+print("********************************************************************************************************************************************************************************")
+print("                                                                      *-------TRIO-------*")
+print("                                                                      *   MUSIC PLAYER   *")
 home()
