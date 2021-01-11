@@ -63,7 +63,10 @@ class linked_list:
         ran = random.randint(0, leng - 1)
 
         print("\n\tCurrently playing: ", elems[ran])
-        print("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _") #isme laga delay
+             from time import sleep
+                playlist = 'SONGNAME.............'
+                for i in range(20):
+                      print(playlist[i],  end='-'); sleep(0.5)#isme laga delay
 
     def alternate(self):
         elems = []
@@ -74,7 +77,10 @@ class linked_list:
         leng = my_list.length()
         for i in range(0, leng):
             print("\nCurrently playing: ", i+1, ".", elems[i])
-            print("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")  # isme laga delay
+              from time import sleep
+               playlist = 'SONGNAME.............'
+               for i in range(20):
+                 print(playlist[i],  end='-'); sleep(0.5)# isme laga delay
             if i == leng - 1:
                 print("\n************PLAYLIST_PLAYED************")
 
@@ -88,7 +94,10 @@ class linked_list:
             cur_node=cur_node.next
         for i in range(n):
             print("\nPlaying ",cur_node.data)
-            print("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")  # isme laga delay
+            from time import sleep
+               playlist = 'SONGNAME.............'
+               for i in range(20):
+                      print(playlist[i],  end='-'); sleep(0.5) # isme laga delay
 
     def shuffle(self):
         elems = []
@@ -101,7 +110,10 @@ class linked_list:
         while True:
             ran = random.randint(0, leng - 1)
             print("\n\tCurrently playing: ", elems[ran])
-            print("_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _")  # isme laga delay
+              from time import sleep
+                   playlist = 'SONGNAME.............'
+                   for i in range(20):
+                       print(playlist[i],  end='-'); sleep(0.5)# isme laga delay
             again=input("\n\tPress E to Stop:")
             if again=="e" or again=="E":
                 break
